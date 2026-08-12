@@ -31,6 +31,42 @@
   --topbar-h: 72px;
 }
 
+
+/* =============== MODERN SCROLLBAR =============== */
+html{
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) var(--bg-1);
+}
+.sidebar{
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dim) transparent;
+}
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track{
+  background: var(--bg-1);
+}
+::-webkit-scrollbar-thumb{
+  background: var(--gold-dim);
+  border-radius: 8px;
+  border: 2px solid var(--bg-1);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: var(--gold);
+}
+
+.sidebar::-webkit-scrollbar-track{
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb{
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
 *,*::before,*::after{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 
@@ -39,7 +75,7 @@ body{
   background: var(--bg-0);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -69,7 +105,7 @@ p{ margin: 0; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .24em;
-  font-size: 12.5px;
+  font-size: 20px;
   color: var(--gold);
 }
 
@@ -252,7 +288,12 @@ p{ margin: 0; }
   background:
     radial-gradient(ellipse 900px 500px at 15% 0%, rgba(198,161,91,0.10), transparent 60%),
     radial-gradient(ellipse 700px 500px at 100% 100%, rgba(110,31,31,0.16), transparent 60%),
-    var(--bg-1);
+    linear-gradient(90deg, rgba(8,7,6,0.94) 0%, rgba(8,7,6,0.80) 32%, rgba(8,7,6,0.40) 60%, rgba(8,7,6,0.72) 100%),
+    linear-gradient(0deg, var(--bg-0) 0%, rgba(8,7,6,0.35) 40%, rgba(8,7,6,0.15) 100%),
+    url('img/hero-banner.jpg');
+  background-size: auto, auto, auto, auto, cover;
+  background-position: center, center, center, center, center 62%;
+  background-repeat: no-repeat;
 }
 .hero::after{
   content:"";
@@ -266,14 +307,21 @@ p{ margin: 0; }
 }
 .hero-inner{ position:relative; max-width: 760px; }
 .hero h1{
-  font-size: clamp(46px, 7vw, 84px);
-  line-height: .96;
+  font-family: 'Metamorphous', var(--font-deco);
+  font-weight: 400;
+  line-height: .9;
   margin-top: 14px;
-  color: var(--text);
-  text-shadow: 0 0 40px rgba(198,161,91,0.18);
+  color: var(--gold-dim);
+  text-shadow: 0 0 50px rgba(198,161,91,0.28), 0 2px 18px rgba(0,0,0,.6);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
 }
-.hero h1 em{ font-style: normal; color: var(--gold-bright); }
-.hero-sub{
+.hero h1 .num{
+  font-size: clamp(92px, 13vw, 160px);
+  color: var(--gold-bright);
+}
+.hero h1 em{ font-style: normal; font-size: clamp(46px, 6.4vw, 80px); color: var(--gold); letter-spacing: .04em; }.hero-sub{
   font-family: var(--font-quote);
   font-weight: 600;
   font-size: 23px;
@@ -390,6 +438,10 @@ p{ margin: 0; }
 .race-text h3{ font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); margin-top: 30px; margin-bottom: 14px; font-family: var(--font-ui); font-weight: 600; }
 .race-text h3:first-child{ margin-top:0; }
 
+.race-lore{ font-family: var(--font-body); font-weight:500; font-size:22px; line-height:1.75; color: var(--text-dim); margin: 18px 0 6px; max-width: 62ch; }
+.race-lore p{ margin: 0 0 14px; }
+.race-lore p:last-child{ margin-bottom: 0; }
+.race-lore b{ color: var(--gold-bright); font-weight:600; }
 .char-list{ display:grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 12px; }
 .char-chip{ border:1px solid var(--line-soft); padding: 12px 14px; background: var(--bg-2); }
 .char-chip .n{ font-family: var(--font-display); font-size: 15px; color: var(--text); }
@@ -455,28 +507,110 @@ p{ margin: 0; }
 .tl-item h3{ font-size: 20px; letter-spacing:.04em; }
 .tl-item .eyebrow{ margin-bottom:6px; display:block; }
 
-/* =============== HARİTA =============== */
-.map-frame{
+/* =============== HARİTA (zoom/pan görüntüleyici) =============== */
+.map-viewer{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
   border: 1px solid var(--line-soft);
-  background: var(--bg-1);
-  padding: 10px;
+  background: #0a0806;
   margin-bottom: 18px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
 }
-.world-map{ display:block; width:100%; height:auto; }
-.map-pin circle{ fill: var(--gold-bright); stroke: var(--bg-0); stroke-width: 2; }
-.map-label{
+.map-viewer.dragging{ cursor: grabbing; }
+.map-canvas{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+.map-canvas img{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.map-pin{
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -100%);
+  text-decoration: none;
+  z-index: 2;
+  line-height: 0;
+}
+.map-pin .pin-dot{
+  display: block;
+  width: 13px; height: 13px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--gold-bright);
+  border: 1.5px solid #100d09;
+  transform: rotate(-45deg);
+  box-shadow: 0 1px 4px rgba(0,0,0,.6);
+  transition: background .15s ease, transform .15s ease;
+}
+.map-pin.muted .pin-dot{ background: var(--text-faint); }
+.map-pin:hover .pin-dot, .map-pin:focus-visible .pin-dot{ background:#fff; transform: rotate(-45deg) scale(1.15); }
+.map-pin .pin-label{
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
   font-family: var(--font-ui);
-  font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 11.5px;
   letter-spacing: .04em;
-  fill: var(--text-dim);
+  color: #fff;
+  background: rgba(10,8,6,.82);
+  border: 1px solid rgba(198,161,91,0.35);
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .15s ease, transform .15s ease;
+  pointer-events: none;
 }
-.map-label-strong{
-  font-family: var(--font-display);
-  font-size: 17px;
-  fill: var(--gold-bright);
-  letter-spacing: .06em;
+.map-pin:hover .pin-label, .map-pin:focus-visible .pin-label{ opacity: 1; transform: translateX(-50%) translateY(-8px); }
+.map-controls{
+  position: absolute;
+  right: 14px; bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
 }
+.map-controls button{
+  width: 36px; height: 36px;
+  background: rgba(10,8,6,.85);
+  border: 1px solid var(--line);
+  color: var(--gold-bright);
+  font-size: 18px;
+  font-family: var(--font-ui);
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 3px;
+  backdrop-filter: blur(4px);
+}
+.map-controls button:hover{ border-color: var(--gold-dim); background: rgba(20,16,12,.92); }
+.map-hint{
+  position: absolute;
+  left: 14px; bottom: 14px;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.7);
+  background: rgba(10,8,6,.6);
+  padding: 5px 10px;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 4;
+}
+@media(max-width: 640px){ .map-hint{ display:none; } }
+
 .map-note{
   font-family: var(--font-ui);
   font-weight: 500;

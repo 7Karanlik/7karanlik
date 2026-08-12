@@ -63,53 +63,177 @@
       <div class="hero-inner" style="max-width:760px;">
         <span class="eyebrow">Ansiklopedi · Coğrafya</span>
         <h1 style="font-size:clamp(38px,5vw,58px);">Dünya Haritası</h1>
-        <p class="hero-lore">Yedi kadim krallığın toprakları, Kara Orman'ın gölgesinden Volvor Dağları'nın doruklarına uzanır. Aşağıdaki harita, bilinen dünyanın kabataslak bir tasvirini sunar — bölgeler ve yerler hâlâ kayıt altına alınıyor.</p>
+        <p class="hero-lore">Yedi kadim krallığın toprakları, Kara Orman'ın gölgesinden Volvor Dağları'nın doruklarına uzanır. Haritada gezinmek için sürükleyin, yakınlaşmak için fare tekerleğini veya sağ alttaki kontrolleri kullanın. Altın işaretlere tıklayarak ilgili ırkın kaydını açabilirsiniz.</p>
       </div>
     </section>
 
     <section class="section tight">
-      <div class="map-frame">
-        <svg viewBox="0 0 1000 620" class="world-map" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="mapGlow" cx="50%" cy="40%" r="70%">
-              <stop offset="0%" stop-color="#2a2117"/>
-              <stop offset="100%" stop-color="#100d09"/>
-            </radialGradient>
-          </defs>
-          <rect x="0" y="0" width="1000" height="620" fill="url(#mapGlow)"/>
-          <g opacity="0.18" stroke="#c6a15b" stroke-width="1">
-            <path d="M0 60 H1000 M0 160 H1000 M0 260 H1000 M0 360 H1000 M0 460 H1000 M0 560 H1000"/>
-            <path d="M60 0 V620 M180 0 V620 M300 0 V620 M420 0 V620 M540 0 V620 M660 0 V620 M780 0 V620 M900 0 V620"/>
-          </g>
+      <div class="map-viewer" id="mapViewer">
+        <div class="map-canvas" id="mapCanvas">
+          <img src="assets/img/dunya-haritasi.jpg" alt="7 Karanlık dünyasının haritası" draggable="false" id="mapImg">
 
-          <!-- Regions (stylised) -->
-          <path d="M120 160 Q220 90 340 140 Q380 210 320 280 Q220 320 140 260 Q90 210 120 160Z" fill="#1c3a63" opacity="0.35" stroke="#5c7fb0" stroke-width="1.5"/>
-          <path d="M360 120 Q470 80 560 130 Q590 190 540 240 Q450 270 380 220 Q340 170 360 120Z" fill="#7a1f1f" opacity="0.35" stroke="#c25a5a" stroke-width="1.5"/>
-          <path d="M600 100 Q710 70 800 120 Q830 180 780 230 Q690 260 620 210 Q580 160 600 100Z" fill="#c9a227" opacity="0.30" stroke="#e8cf8a" stroke-width="1.5"/>
-          <path d="M140 320 Q250 290 340 340 Q370 410 300 460 Q210 490 140 440 Q100 380 140 320Z" fill="#1e3a5f" opacity="0.35" stroke="#6a93c4" stroke-width="1.5"/>
-          <path d="M380 340 Q490 300 580 350 Q610 420 540 470 Q450 500 390 440 Q350 390 380 340Z" fill="#141414" opacity="0.55" stroke="#7a1f1f" stroke-width="1.5"/>
-          <path d="M620 330 Q730 300 820 350 Q850 420 780 470 Q690 500 630 440 Q590 390 620 330Z" fill="#3a0f0f" opacity="0.4" stroke="#8f8a76" stroke-width="1.5"/>
-          <path d="M300 470 Q410 450 500 490 Q530 550 460 590 Q380 610 310 570 Q270 520 300 470Z" fill="#141414" opacity="0.4" stroke="#c9a227" stroke-width="1.5"/>
+          <a class="map-pin" href="irklar.html#vitan" style="left:18.2%; top:34.2%;"><span class="pin-dot"></span><span class="pin-label">Vitan</span></a>
+          <a class="map-pin" href="irklar.html#torion" style="left:38.4%; top:33.7%;"><span class="pin-dot"></span><span class="pin-label">Torion</span></a>
+          <a class="map-pin" href="irklar.html#qwaki" style="left:52.4%; top:23.2%;"><span class="pin-dot"></span><span class="pin-label">Qwaki</span></a>
+          <a class="map-pin" href="irklar.html#nigaron" style="left:70.0%; top:10.3%;"><span class="pin-dot"></span><span class="pin-label">Nigaron</span></a>
+          <a class="map-pin" href="irklar.html#shaol" style="left:68.4%; top:22.0%;"><span class="pin-dot"></span><span class="pin-label">Shaol</span></a>
+          <a class="map-pin" href="irklar.html#argon" style="left:77.8%; top:33.7%;"><span class="pin-dot"></span><span class="pin-label">Argon</span></a>
+          <a class="map-pin" href="irklar.html#ribon" style="left:37.8%; top:56.2%;"><span class="pin-dot"></span><span class="pin-label">Ribon</span></a>
+          <a class="map-pin" href="irklar.html#arthex" style="left:61.2%; top:51.8%;"><span class="pin-dot"></span><span class="pin-label">Arthex</span></a>
+          <a class="map-pin" href="irklar.html#urigon" style="left:88.2%; top:61.5%;"><span class="pin-dot"></span><span class="pin-label">Urigon</span></a>
+          <a class="map-pin" href="irklar.html#orogo" style="left:25.7%; top:75.7%;"><span class="pin-dot"></span><span class="pin-label">Orogo</span></a>
+          <a class="map-pin" href="irklar.html#maita" style="left:48.2%; top:81.1%;"><span class="pin-dot"></span><span class="pin-label">Maita</span></a>
+          <a class="map-pin" href="irklar.html#lau" style="left:76.8%; top:81.1%;"><span class="pin-dot"></span><span class="pin-label">Lau</span></a>
 
-          <!-- Kara Orman (central dark heart) -->
-          <ellipse cx="500" cy="300" rx="46" ry="34" fill="#0b0d08" stroke="#c6a15b" stroke-width="1.4"/>
-          <text x="500" y="304" text-anchor="middle" class="map-label map-label-strong">Kara Orman</text>
+          <span class="map-pin muted" style="left:37.8%; top:7.3%;"><span class="pin-dot"></span><span class="pin-label">Hifler</span></span>
+          <span class="map-pin muted" style="left:9.1%; top:91.3%;"><span class="pin-dot"></span><span class="pin-label">Kara Orman</span></span>
+          <span class="map-pin muted" style="left:57.0%; top:70.8%;"><span class="pin-dot"></span><span class="pin-label">Thorux Gölü</span></span>
+        </div>
 
-          <!-- Markers -->
-          <g class="map-pin" data-name="Volvor Dağları"><circle cx="330" cy="230" r="5"/><text x="330" y="216" text-anchor="middle" class="map-label">Volvor Dağları</text></g>
-          <g class="map-pin" data-name="Moya Şehri"><circle cx="220" cy="190" r="5"/><text x="220" y="176" text-anchor="middle" class="map-label">Moya Şehri</text></g>
-          <g class="map-pin" data-name="Irona Şehri"><circle cx="470" cy="160" r="5"/><text x="470" y="146" text-anchor="middle" class="map-label">Irona Şehri</text></g>
-          <g class="map-pin" data-name="Tagra Şehri"><circle cx="700" cy="160" r="5"/><text x="700" y="146" text-anchor="middle" class="map-label">Tagra Şehri</text></g>
-          <g class="map-pin" data-name="Angoj Köyü"><circle cx="220" cy="380" r="5"/><text x="220" y="366" text-anchor="middle" class="map-label">Angoj Köyü</text></g>
-          <g class="map-pin" data-name="Minata Köyü"><circle cx="720" cy="390" r="5"/><text x="720" y="376" text-anchor="middle" class="map-label">Minata Köyü</text></g>
-          <g class="map-pin" data-name="Deril Denizi"><circle cx="400" cy="540" r="5"/><text x="400" y="526" text-anchor="middle" class="map-label">Deril Denizi</text></g>
-          <g class="map-pin" data-name="Kuzey Dağları"><circle cx="640" cy="140" r="5"/><text x="640" y="126" text-anchor="middle" class="map-label">Kuzey Dağları</text></g>
-          <g class="map-pin" data-name="Vakua Tepesi"><circle cx="180" cy="290" r="5"/><text x="180" y="276" text-anchor="middle" class="map-label">Vakua Tepesi</text></g>
-          <g class="map-pin" data-name="Hifler Adası"><circle cx="850" cy="300" r="5"/><text x="850" y="286" text-anchor="middle" class="map-label">Hifler Adası</text></g>
-        </svg>
+        <div class="map-controls">
+          <button type="button" id="mapZoomIn" aria-label="Yakınlaştır">+</button>
+          <button type="button" id="mapZoomOut" aria-label="Uzaklaştır">−</button>
+          <button type="button" id="mapReset" aria-label="Haritayı sıfırla">⤢</button>
+        </div>
+        <div class="map-hint">Sürükle · Tekerlekle yakınlaştır · Çift tıkla</div>
       </div>
-      <p class="map-note">Harita illüstratiftir ve krallıkların yaklaşık konumlarını sembolize eder. Yerlerin tam kayıtları için aşağıdaki listeye bakabilir veya <a href="evren.html">Evren</a> sayfasındaki "Mekanlar" sekmesini inceleyebilirsiniz.</p>
+      <p class="map-note">Altın renkli işaretler ırk kayıtlarına, soluk işaretler ise coğrafi noktalara işaret eder. Tüm yerlerin tam listesi için aşağıya veya <a href="evren.html">Evren</a> sayfasındaki "Mekanlar" sekmesine bakabilirsiniz.</p>
     </section>
+
+    <script>
+    (function(){
+      var viewer = document.getElementById('mapViewer');
+      var canvas = document.getElementById('mapCanvas');
+      if (!viewer || !canvas) return;
+
+      var scale = 1, minScale = 1, maxScale = 5;
+      var tx = 0, ty = 0;
+      var dragging = false, dragMoved = false;
+      var startX = 0, startY = 0, startTx = 0, startTy = 0;
+      var pointers = new Map();
+      var pinchStartDist = null, pinchStartScale = 1;
+
+      function apply(){
+        canvas.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+      }
+
+      function clamp(){
+        var vw = viewer.clientWidth, vh = viewer.clientHeight;
+        var cw = vw * scale, ch = vh * scale;
+        var minTx = Math.min(0, vw - cw), minTy = Math.min(0, vh - ch);
+        tx = Math.max(minTx, Math.min(0, tx));
+        ty = Math.max(minTy, Math.min(0, ty));
+      }
+
+      function zoomAt(clientX, clientY, targetScale){
+        var rect = viewer.getBoundingClientRect();
+        var offsetX = clientX - rect.left;
+        var offsetY = clientY - rect.top;
+        var newScale = Math.max(minScale, Math.min(maxScale, targetScale));
+        if (newScale === scale) return;
+        var ratio = newScale / scale;
+        tx = offsetX - (offsetX - tx) * ratio;
+        ty = offsetY - (offsetY - ty) * ratio;
+        scale = newScale;
+        clamp();
+        apply();
+      }
+
+      viewer.addEventListener('wheel', function(e){
+        e.preventDefault();
+        var factor = e.deltaY < 0 ? 1.18 : 1/1.18;
+        zoomAt(e.clientX, e.clientY, scale * factor);
+      }, { passive:false });
+
+      viewer.addEventListener('dblclick', function(e){
+        e.preventDefault();
+        zoomAt(e.clientX, e.clientY, scale < maxScale ? scale * 1.7 : minScale);
+      });
+
+      function dist(a, b){
+        return Math.hypot(a.x - b.x, a.y - b.y);
+      }
+
+      viewer.addEventListener('pointerdown', function(e){
+        if (e.target.closest('.map-controls') || e.target.closest('a.map-pin')) return;
+        viewer.setPointerCapture(e.pointerId);
+        pointers.set(e.pointerId, { x:e.clientX, y:e.clientY });
+        dragMoved = false;
+        if (pointers.size === 1){
+          dragging = true;
+          viewer.classList.add('dragging');
+          startX = e.clientX; startY = e.clientY;
+          startTx = tx; startTy = ty;
+        } else if (pointers.size === 2){
+          dragging = false;
+          var pts = Array.from(pointers.values());
+          pinchStartDist = dist(pts[0], pts[1]);
+          pinchStartScale = scale;
+        }
+      });
+
+      viewer.addEventListener('pointermove', function(e){
+        if (!pointers.has(e.pointerId)) return;
+        pointers.set(e.pointerId, { x:e.clientX, y:e.clientY });
+
+        if (pointers.size === 2 && pinchStartDist){
+          var pts = Array.from(pointers.values());
+          var newDist = dist(pts[0], pts[1]);
+          var midX = (pts[0].x + pts[1].x) / 2;
+          var midY = (pts[0].y + pts[1].y) / 2;
+          var targetScale = pinchStartScale * (newDist / pinchStartDist);
+          zoomAt(midX, midY, targetScale);
+          dragMoved = true;
+        } else if (dragging){
+          var dx = e.clientX - startX, dy = e.clientY - startY;
+          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragMoved = true;
+          tx = startTx + dx;
+          ty = startTy + dy;
+          clamp();
+          apply();
+        }
+      });
+
+      function endPointer(e){
+        pointers.delete(e.pointerId);
+        if (pointers.size === 1){
+          var remaining = Array.from(pointers.values())[0];
+          dragging = true;
+          startX = remaining.x; startY = remaining.y;
+          startTx = tx; startTy = ty;
+          pinchStartDist = null;
+        } else if (pointers.size === 0){
+          dragging = false;
+          pinchStartDist = null;
+          viewer.classList.remove('dragging');
+        }
+      }
+      viewer.addEventListener('pointerup', endPointer);
+      viewer.addEventListener('pointercancel', endPointer);
+
+      viewer.querySelectorAll('a.map-pin').forEach(function(pin){
+        pin.addEventListener('click', function(e){
+          if (dragMoved){ e.preventDefault(); }
+        });
+      });
+
+      document.getElementById('mapZoomIn').addEventListener('click', function(){
+        var r = viewer.getBoundingClientRect();
+        zoomAt(r.left + r.width/2, r.top + r.height/2, scale * 1.4);
+      });
+      document.getElementById('mapZoomOut').addEventListener('click', function(){
+        var r = viewer.getBoundingClientRect();
+        zoomAt(r.left + r.width/2, r.top + r.height/2, scale / 1.4);
+      });
+      document.getElementById('mapReset').addEventListener('click', function(){
+        scale = 1; tx = 0; ty = 0; apply();
+      });
+
+      window.addEventListener('resize', function(){ clamp(); apply(); });
+
+      apply();
+    })();
+    </script>
 
     <section class="section tight">
       <div class="section-head">
