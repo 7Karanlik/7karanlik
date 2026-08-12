@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ana Sayfa · 7 Karanlık Evren Ansiklopedisi</title>
+<meta name="description" content="7 Karanlık evreninin resmi ansiklopedisi: ırklar, karakterler, krallıklar ve kadim kronoloji.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/style.css">
+<script src="data/data.js"></script>
+<script src="assets/common.js"></script>
+
+</head>
+<body>
+<div class="scrim"></div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/img/logo.png" alt="7 Karanlık Logosu">
+        <span class="tagline">Evren Ansiklopedisi</span>
+      </a>
+    </div>
+    <nav class="nav-main">
+<a href="index.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg><span>Ana Sayfa</span></a>
+<a href="harita.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span>Dünya Haritası</span></a>
+<a href="irklar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><span>Irklar</span></a>
+<a href="karakterler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 13.4c2.4.2 4.4 2 4.9 4.9"/></svg><span>Karakterler</span></a>
+<a href="evren.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>Evren</span></a>
+<a href="kronoloji.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><span>Kronoloji</span></a>
+<a href="silahlar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.5 3.5 20.5 9.5 11.5 18.5 7 20l1.5-4.5 6-6z"/><path d="M17.5 6.5l2 2"/><path d="M4 20l4.5-4.5"/></svg><span>Silahlar</span></a>
+<a href="galeri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="13" height="13" rx="1"/><circle cx="7" cy="7" r="1.3"/><path d="M3 13l3.5-3.5L10 13l3-3 3 3"/><path d="M8 21h13V8"/></svg><span>Galeri</span></a>
+<a href="haberler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1.4"/><path d="M7 8.5h4M7 12h10M7 15.5h10"/></svg><span>Haberler</span></a>
+<a href="test-irk.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.4.9c0 1.9-2.6 2.1-2.6 3.8"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg><span>Test: Hangi Irksın</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      "Karanlık, sadece ışığı yutmaz.<br>Gerçeği de gizler."
+    </div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
+        <input type="text" placeholder="Karakter, ırk veya yer ara..." data-global-search>
+      </div>
+      <nav class="topnav">
+<a href="index.html" class="active">Ana Sayfa</a>
+<a href="harita.html">Dünya Haritası</a>
+<a href="irklar.html">Irklar</a>
+<a href="karakterler.html">Karakterler</a>
+<a href="evren.html">Evren</a>
+<a href="kronoloji.html">Kronoloji</a>
+<a href="silahlar.html">Silahlar</a>
+<a href="galeri.html">Galeri</a>
+<a href="haberler.html">Haberler</a>
+<a href="test-irk.html">Test: Hangi Irksın</a>
+        <a href="irklar.html" class="cta">Ansiklopedi</a>
+      </nav>
+    </header>
+    
+    <section class="hero">
+      <div class="quote-card"><span class="mark">"</span>Güç, iradeye boyun eğer. Ama sadakat, ölümü bile yener.</div>
+      <div class="hero-inner">
+        <span class="eyebrow">Yedi Kadim Krallığın Evreni</span>
+        <h1>7 <em>KARANLIK</em></h1>
+        <p class="hero-sub">Bazı kapılar meraktan açılır. Bazıları ise hiç açılmamalıdır.</p>
+        <p class="hero-lore">Yedi kadim krallık. On dokuz soy ve ırk. Gizli anlaşmalar, savaşlar, ihanetler ve lanetler... Kara Orman'ın sırrı yüzyıllardır kimse tarafından çözülemedi. Ya sen çözersen?</p>
+        <a class="btn" href="irklar.html">Evreni Keşfet</a>
+        <a class="btn ghost" href="karakterler.html">Karakterleri Gör</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">Ansiklopedi</span><h2>Evreni Keşfet</h2></div>
+        <div class="desc">Krallıkların, ırkların ve kadim güçlerin kayıtlı olduğu arşive göz atın.</div>
+      </div>
+      <div class="card-grid">
+    <a class="feature-card" href="irklar.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Irklar</h3>
+      <p>19 kadim soy — Orogo'nun gergedan zırhlısından Nigaron'un buz manastırlarına. Her birinin bayrağı, simgesi ve kanı farklı.</p>
+      <span class="go">Tüm ırkları gör →</span>
+    </a>
+    <a class="feature-card" href="karakterler.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 13.4c2.4.2 4.4 2 4.9 4.9"/></svg></div>
+      <h3>Karakterler</h3>
+      <p>70 kral, komutan, isyancı ve gizemli figür. Krallıkların kaderini belirleyen isimler.</p>
+      <span class="go">Tüm karakterleri gör →</span>
+    </a>
+    <a class="feature-card" href="kronoloji.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div>
+      <h3>Kronoloji</h3>
+      <p>12 bölümlük hikâye — tahtın gölgesinden kadim kadere uzanan yol.</p>
+      <span class="go">Zaman çizelgesini gör →</span>
+    </a>
+    <a class="feature-card" href="evren.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg></div>
+      <h3>Mekanlar</h3>
+      <p>26 bilinen yer — Kara Orman'dan Volvor Dağları'na, krallıkların sınırlarını çizen topraklar.</p>
+      <span class="go">Haritayı keşfet →</span>
+    </a>
+    <a class="feature-card" href="evren.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-1-6.5-4-6.5-8 0-3 1.5-5 3-6-1-.3-2-1.4-2.2-2.6 1.6-.4 3 .2 3.7 1.1.6-.2 1.3-.3 2-.3s1.4.1 2 .3c.7-.9 2.1-1.5 3.7-1.1-.2 1.2-1.2 2.3-2.2 2.6 1.5 1 3 3 3 6 0 4-2.5 7-6.5 8z"/><circle cx="9.7" cy="10.5" r=".6" fill="currentColor" stroke="none"/><circle cx="14.3" cy="10.5" r=".6" fill="currentColor" stroke="none"/></svg></div>
+      <h3>Yaratıklar & Ordular</h3>
+      <p>4 efsanevi yaratık, 8 ordu ve grup. Savaş meydanlarını dolduran güçler.</p>
+      <span class="go">Yaratıkları gör →</span>
+    </a>
+    <a class="feature-card" href="evren.html" style="display:block;">
+      <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg></div>
+      <h3>Tanrılar & Eşyalar</h3>
+      <p>3 tanrı, 6 kadim eşya ve taş. Dünyayı şekillendiren gizemli güçler.</p>
+      <span class="go">Evreni keşfet →</span>
+    </a>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="section-head">
+        <div><span class="eyebrow">Soylar</span><h2>Öne Çıkan Irklar</h2></div>
+        <a class="section-link" href="irklar.html">Tüm ırkları gör →</a>
+      </div>
+      <div class="race-grid">
+      <a class="race-card" href="irklar.html#arthex">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Arthex.jpg" alt="Arthex ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#1c3a63"></span><span style="background:#e8e2d5"></span></div>
+        <div class="info">
+          <div class="name">Arthex</div>
+          <div class="sub">Simge: Kılıç</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#orogo">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Orogo.jpg" alt="Orogo ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#c9a227"></span><span style="background:#141414"></span></div>
+        <div class="info">
+          <div class="name">Orogo</div>
+          <div class="sub">Simge: Gergedan</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#urigon">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Urigon.jpg" alt="Urigon ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#141414"></span><span style="background:#7a1f1f"></span></div>
+        <div class="info">
+          <div class="name">Urigon</div>
+          <div class="sub">Simge: Kanlı Asa</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#vitan">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Vitan.jpg" alt="Vitan ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#7a1f1f"></span><span style="background:#3a0f0f"></span></div>
+        <div class="info">
+          <div class="name">Vitan</div>
+          <div class="sub">Simge: Balina</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#nigaron">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Nigaron.jpg" alt="Nigaron ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#141414"></span><span style="background:#c9a227"></span></div>
+        <div class="info">
+          <div class="name">Nigaron</div>
+          <div class="sub">Simge: Kurt</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#vedur">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Vedur.jpg" alt="Vedur ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#d8d2c2"></span><span style="background:#8f8a76"></span></div>
+        <div class="info">
+          <div class="name">Vedur</div>
+          <div class="sub">Simge: At</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#dormit">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Dormit.jpg" alt="Dormit ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#1e3a5f"></span><span style="background:#0e1c30"></span></div>
+        <div class="info">
+          <div class="name">Dormit</div>
+          <div class="sub">Simge: Lukadia (Deniz Ejderi)</div>
+        </div>
+      </a>
+      <a class="race-card" href="irklar.html#korigan">
+        <div class="thumb-wrap"><img src="assets/img/thumb/Korigan.jpg" alt="Korigan ırkı" loading="lazy"></div>
+        <div class="swatch"><span style="background:#c9a227"></span><span style="background:#7a1f1f"></span></div>
+        <div class="info">
+          <div class="name">Korigan</div>
+          <div class="sub">Simge: Ateş</div>
+        </div>
+      </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="quote">"Güç, iradeye boyun eğer. Ama sadakat, ölümü bile yener."</div>
+      <div class="rights"><span class="big">7</span>© 7 Karanlık Evreni — Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

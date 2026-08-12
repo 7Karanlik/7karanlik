@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri · 7 Karanlık Evren Ansiklopedisi</title>
+<meta name="description" content="7 Karanlık evrenindeki ırkların görsel galerisi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/style.css">
+<script src="data/data.js"></script>
+<script src="assets/common.js"></script>
+
+</head>
+<body>
+<div class="scrim"></div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/img/logo.png" alt="7 Karanlık Logosu">
+        <span class="tagline">Evren Ansiklopedisi</span>
+      </a>
+    </div>
+    <nav class="nav-main">
+<a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg><span>Ana Sayfa</span></a>
+<a href="harita.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span>Dünya Haritası</span></a>
+<a href="irklar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><span>Irklar</span></a>
+<a href="karakterler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 13.4c2.4.2 4.4 2 4.9 4.9"/></svg><span>Karakterler</span></a>
+<a href="evren.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>Evren</span></a>
+<a href="kronoloji.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><span>Kronoloji</span></a>
+<a href="silahlar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.5 3.5 20.5 9.5 11.5 18.5 7 20l1.5-4.5 6-6z"/><path d="M17.5 6.5l2 2"/><path d="M4 20l4.5-4.5"/></svg><span>Silahlar</span></a>
+<a href="galeri.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="13" height="13" rx="1"/><circle cx="7" cy="7" r="1.3"/><path d="M3 13l3.5-3.5L10 13l3-3 3 3"/><path d="M8 21h13V8"/></svg><span>Galeri</span></a>
+<a href="haberler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1.4"/><path d="M7 8.5h4M7 12h10M7 15.5h10"/></svg><span>Haberler</span></a>
+<a href="test-irk.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.4.9c0 1.9-2.6 2.1-2.6 3.8"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg><span>Test: Hangi Irksın</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      "Karanlık, sadece ışığı yutmaz.<br>Gerçeği de gizler."
+    </div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
+        <input type="text" placeholder="Karakter, ırk veya yer ara..." data-global-search>
+      </div>
+      <nav class="topnav">
+<a href="index.html">Ana Sayfa</a>
+<a href="harita.html">Dünya Haritası</a>
+<a href="irklar.html">Irklar</a>
+<a href="karakterler.html">Karakterler</a>
+<a href="evren.html">Evren</a>
+<a href="kronoloji.html">Kronoloji</a>
+<a href="silahlar.html">Silahlar</a>
+<a href="galeri.html" class="active">Galeri</a>
+<a href="haberler.html">Haberler</a>
+<a href="test-irk.html">Test: Hangi Irksın</a>
+        <a href="irklar.html" class="cta">Ansiklopedi</a>
+      </nav>
+    </header>
+
+    <section class="hero" style="padding:60px 48px;">
+      <div class="hero-inner" style="max-width:760px;">
+        <span class="eyebrow">Ansiklopedi · Görseller</span>
+        <h1 style="font-size:clamp(38px,5vw,58px);">Galeri</h1>
+        <p class="hero-lore">Yedi krallığın soylarından portreler. Her görsel, ilgili ırkın tam kaydına açılır.</p>
+      </div>
+    </section>
+    <section class="section tight">
+      <div class="race-grid" id="gallery-grid"></div>
+    </section>
+    <script>
+    (function(){
+      var grid = document.getElementById('gallery-grid');
+      if (!grid || typeof SITE_DATA === 'undefined') return;
+      var withImg = ["Argon","Arthex","Darkon","Dormit","Figit","Gron","Korigan","Lau","Maita","Nigaron","Orogo","Qwaki","Ribon","Torion","Urigon","Vedur","Vitan"];
+      grid.innerHTML = withImg.map(function(name){
+        var irk = (SITE_DATA.irklar || []).find(function(i){ return i.ad === name; }) || {};
+        var slug = name.toLowerCase().replace(/ı/g,'i').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ö/g,'o').replace(/ç/g,'c');
+        return '<a class="race-card" href="irklar.html#' + slug + '">' +
+          '<div class="thumb-wrap"><img src="assets/img/full/' + name + '.jpg" alt="' + name + ' ırkı" loading="lazy"></div>' +
+          '<div class="info"><div class="name">' + name + '</div>' +
+          '<div class="sub">' + (irk.simge ? 'Simge: ' + irk.simge : '') + '</div></div>' +
+          '</a>';
+      }).join('');
+    })();
+    </script>
+
+    <footer class="site-footer">
+      <div class="quote">"Güç, iradeye boyun eğer. Ama sadakat, ölümü bile yener."</div>
+      <div class="rights"><span class="big">7</span>© 7 Karanlık Evreni — Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

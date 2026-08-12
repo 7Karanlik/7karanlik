@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test: Hangi Irksın · 7 Karanlık Evren Ansiklopedisi</title>
+<meta name="description" content="7 sorulu kişilik testiyle hangi 7 Karanlık ırkına ait olduğunu keşfet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/style.css">
+<script src="data/data.js"></script>
+<script src="assets/common.js"></script>
+
+</head>
+<body>
+<div class="scrim"></div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/img/logo.png" alt="7 Karanlık Logosu">
+        <span class="tagline">Evren Ansiklopedisi</span>
+      </a>
+    </div>
+    <nav class="nav-main">
+<a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg><span>Ana Sayfa</span></a>
+<a href="harita.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span>Dünya Haritası</span></a>
+<a href="irklar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><span>Irklar</span></a>
+<a href="karakterler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 13.4c2.4.2 4.4 2 4.9 4.9"/></svg><span>Karakterler</span></a>
+<a href="evren.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>Evren</span></a>
+<a href="kronoloji.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><span>Kronoloji</span></a>
+<a href="silahlar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.5 3.5 20.5 9.5 11.5 18.5 7 20l1.5-4.5 6-6z"/><path d="M17.5 6.5l2 2"/><path d="M4 20l4.5-4.5"/></svg><span>Silahlar</span></a>
+<a href="galeri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="13" height="13" rx="1"/><circle cx="7" cy="7" r="1.3"/><path d="M3 13l3.5-3.5L10 13l3-3 3 3"/><path d="M8 21h13V8"/></svg><span>Galeri</span></a>
+<a href="haberler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1.4"/><path d="M7 8.5h4M7 12h10M7 15.5h10"/></svg><span>Haberler</span></a>
+<a href="test-irk.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.4.9c0 1.9-2.6 2.1-2.6 3.8"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg><span>Test: Hangi Irksın</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      "Karanlık, sadece ışığı yutmaz.<br>Gerçeği de gizler."
+    </div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
+        <input type="text" placeholder="Karakter, ırk veya yer ara..." data-global-search>
+      </div>
+      <nav class="topnav">
+<a href="index.html">Ana Sayfa</a>
+<a href="harita.html">Dünya Haritası</a>
+<a href="irklar.html">Irklar</a>
+<a href="karakterler.html">Karakterler</a>
+<a href="evren.html">Evren</a>
+<a href="kronoloji.html">Kronoloji</a>
+<a href="silahlar.html">Silahlar</a>
+<a href="galeri.html">Galeri</a>
+<a href="haberler.html">Haberler</a>
+<a href="test-irk.html" class="active">Test: Hangi Irksın</a>
+        <a href="irklar.html" class="cta">Ansiklopedi</a>
+      </nav>
+    </header>
+
+    <section class="hero" style="padding:60px 48px;">
+      <div class="hero-inner" style="max-width:760px;">
+        <span class="eyebrow">Ansiklopedi · Kişilik Testi</span>
+        <h1 style="font-size:clamp(38px,5vw,58px);">Hangi Irksın?</h1>
+        <p class="hero-lore">Yedi soru, yedi kadim krallık. Verdiğin cevaplar, kanında hangi soyun izleri olduğunu ortaya çıkaracak.</p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="quiz-wrap" id="quiz-wrap">
+        <div class="quiz-progress"><div class="bar" id="quiz-bar"></div></div>
+        <div id="quiz-steps"></div>
+
+        <div class="quiz-result" id="quiz-result" hidden>
+          <div class="race-detail-inner" style="grid-template-columns: 260px 1fr;">
+            <div class="race-portrait">
+              <img id="result-img" src="" alt="">
+              <div class="tag" id="result-tag"></div>
+            </div>
+            <div>
+              <span class="eyebrow">Sonucun</span>
+              <h2 id="result-name" style="margin-top:8px;"></h2>
+              <div class="race-meta" id="result-meta"></div>
+              <p class="hero-lore" id="result-desc" style="margin-top:18px;"></p>
+              <div class="soon-actions" style="margin-top:22px;">
+                <a class="btn" id="result-link" href="irklar.html">Bu Irkın Kaydını Gör</a>
+                <button class="btn ghost" id="quiz-retry" type="button">Testi Tekrar Çöz</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    (function(){
+      var CATS = {
+        ates:   { name:"Korigan",  slug:"korigan", simge:"Ateş",           renk:"Sarı-Kırmızı",   element:"Ateş - Işık - Elektrik", desc:"Kanın alevle kaynıyor. Korigan soyu gibi, tutkulu ve yıkıcı bir güce sahipsin — çevrendekileri hem ısıtır hem de yakabilirsin." },
+        su:     { name:"Dormit",   slug:"dormit",  simge:"Lukadia (Deniz Ejderi)", renk:"Mavi",     element:"Su - Deniz Canlıları",   desc:"Derinlerin sessizliği sende yaşıyor. Dormit soyu gibi sakin görünsen de, yüzeyin altında büyük bir güç saklıyorsun." },
+        toprak: { name:"Vedur",    slug:"vedur",   simge:"At",             renk:"Beyaz",           element:"Toprak - Ağaç - Bitki - Hayvan", desc:"Doğayla kurduğun bağ seni güçlü kılıyor. Vedur soyu gibi sabırlı, özgür ruhlu ve sadıksın." },
+        hava:   { name:"Argon",    slug:"argon",   simge:"Kartal",         renk:"Turkuaz - Beyaz", element:"Hava - Kuşlar - Fırtına - Hortum", desc:"Gökyüzü senin yuvan. Argon soyu gibi özgürlüğe susamış, hızlı ve keskin bakışlısın." },
+        karanlik:{ name:"Urigon",  slug:"urigon",  simge:"Kanlı Asa",      renk:"Siyah - Kırmızı", element:"Karanlık - Yer Altı Yaşam", desc:"Gölgeler senden korkmaz, sana itaat eder. Urigon soyu gibi gizemli, hesapçı ve tehlikeli derecede kararlısın." },
+        psi:    { name:"Nigaron",  slug:"nigaron", simge:"Kurt",           renk:"Siyah - Sarı",    element:"Psişik - Büyü",           desc:"Zihnin en keskin silahın. Nigaron soyu gibi sezgisel, gizemli ve büyüye yatkın bir ruhun var." },
+        demir:  { name:"Arthex",   slug:"arthex",  simge:"Kılıç",          renk:"Mavi-Beyaz",      element:"Demir - Silah",           desc:"Disiplin ve çelik senin kanunun. Arthex soyu gibi kararlı, onurlu ve savaş meydanında doğmuş bir liderin ta kendisisin." }
+      };
+
+      var QUESTIONS = [
+        { q:"Bir savaşta sana en çok hangi rol yakışır?", opts:[
+          ["Alevle düşmanı sarmak","ates"], ["Suyun altına çekip boğmak","su"], ["Topraktan tuzak kurmak","toprak"],
+          ["Rüzgarla savurmak","hava"], ["Gölgede pusu kurmak","karanlik"], ["Zihnini çökertmek","psi"], ["Kılıçla göğüs göğüse çarpışmak","demir"] ]},
+        { q:"Hangi ortamda kendini en güçlü hissedersin?", opts:[
+          ["Volkanik topraklar","ates"], ["Derin okyanus","su"], ["Yeşil ormanlar","toprak"],
+          ["Fırtınalı gökyüzü","hava"], ["Kara Orman'ın karanlığı","karanlik"], ["Kadim kütüphaneler","psi"], ["Kale ve cephanelikler","demir"] ]},
+        { q:"Bir krallığı yönetsen önceliğin ne olurdu?", opts:[
+          ["Işık ve enerji kaynakları","ates"], ["Denizcilik ve ticaret","su"], ["Tarım ve doğayla uyum","toprak"],
+          ["Gökyüzü filoları","hava"], ["Gizli servisler ve istihbarat","karanlik"], ["Büyü akademileri","psi"], ["Güçlü bir ordu","demir"] ]},
+        { q:"Seni en çok hangi güç cezbeder?", opts:[
+          ["Yıldırım ve ışık","ates"], ["Med-cezir ve fırtına dalgaları","su"], ["Bitkilerin sessiz büyümesi","toprak"],
+          ["Rüzgar ve özgürlük","hava"], ["Gizem ve karanlık sırlar","karanlik"], ["Öngörü ve zihin okuma","psi"], ["Demirin gücü","demir"] ]},
+        { q:"Dostların seni nasıl tanımlar?", opts:[
+          ["Tutkulu ve ateşli","ates"], ["Sakin ve derin düşünceli","su"], ["Sabırlı ve güvenilir","toprak"],
+          ["Özgür ruhlu ve hızlı","hava"], ["Gizemli ve az konuşan","karanlik"], ["Bilge ve sezgisel","psi"], ["Sadık ve kararlı","demir"] ]},
+        { q:"Bir düşmanla karşılaşsan ilk hamlen ne olur?", opts:[
+          ["Doğrudan alevle saldırmak","ates"], ["Suya çekip dengesini bozmak","su"], ["Yere kök salıp savunmak","toprak"],
+          ["Havalanıp yukarıdan saldırmak","hava"], ["Gölgeye karışıp kaybolmak","karanlik"], ["Zihnini karıştırmak","psi"], ["Doğrudan üzerine yürümek","demir"] ]},
+        { q:"Hangi kadim eşya sende olsa en çok işine yarardı?", opts:[
+          ["Bora Çiçeği (şifa/ışık)","ates"], ["Deniz canlılarını çağıran bir kabuk","su"], ["Bizmutu Bitkisi (yaşam gücü)","toprak"],
+          ["Fırtınayı yönlendiren bir tüy","hava"], ["Mitra Taşı (gizemli güç)","karanlik"], ["Zoi Taşı (öngörü)","psi"], ["Efsanevi bir kılıç","demir"] ]}
+      ];
+
+      var scores = { ates:0, su:0, toprak:0, hava:0, karanlik:0, psi:0, demir:0 };
+      var current = 0;
+
+      var stepsEl = document.getElementById('quiz-steps');
+      var barEl = document.getElementById('quiz-bar');
+      var wrapEl = document.getElementById('quiz-wrap');
+      var resultEl = document.getElementById('quiz-result');
+
+      function renderStep(i){
+        if (i >= QUESTIONS.length){ showResult(); return; }
+        var qd = QUESTIONS[i];
+        var html = '<div class="quiz-step">' +
+          '<div class="eyebrow">Soru ' + (i+1) + ' / ' + QUESTIONS.length + '</div>' +
+          '<h3 class="quiz-q">' + qd.q + '</h3>' +
+          '<div class="quiz-opts">' +
+          qd.opts.map(function(o, idx){
+            return '<button type="button" class="quiz-opt" data-cat="' + o[1] + '">' + o[0] + '</button>';
+          }).join('') +
+          '</div></div>';
+        stepsEl.innerHTML = html;
+        barEl.style.width = Math.round((i / QUESTIONS.length) * 100) + '%';
+
+        var btns = stepsEl.querySelectorAll('.quiz-opt');
+        btns.forEach(function(b){
+          b.addEventListener('click', function(){
+            scores[b.getAttribute('data-cat')]++;
+            current++;
+            renderStep(current);
+          });
+        });
+      }
+
+      function showResult(){
+        barEl.style.width = '100%';
+        stepsEl.style.display = 'none';
+        resultEl.hidden = false;
+
+        var best = 'ates', bestScore = -1;
+        Object.keys(scores).forEach(function(k){
+          if (scores[k] > bestScore){ bestScore = scores[k]; best = k; }
+        });
+        var r = CATS[best];
+        document.getElementById('result-img').src = 'assets/img/full/' + r.name + '.jpg';
+        document.getElementById('result-img').alt = r.name + ' ırkı';
+        document.getElementById('result-tag').textContent = r.name;
+        document.getElementById('result-name').textContent = 'Sen bir ' + r.name + '\'sın!';
+        document.getElementById('result-desc').textContent = r.desc;
+        document.getElementById('result-link').href = 'irklar.html#' + r.slug;
+        document.getElementById('result-meta').innerHTML =
+          '<div class="meta-pill"><span class="dot" style="background:#c6a15b"></span>Simge: <b>' + r.simge + '</b></div>' +
+          '<div class="meta-pill">Renk: <b>' + r.renk + '</b></div>' +
+          '<div class="meta-pill">Element: <b>' + r.element + '</b></div>';
+      }
+
+      document.getElementById('quiz-retry').addEventListener('click', function(){
+        scores = { ates:0, su:0, toprak:0, hava:0, karanlik:0, psi:0, demir:0 };
+        current = 0;
+        resultEl.hidden = true;
+        stepsEl.style.display = '';
+        renderStep(0);
+      });
+
+      renderStep(0);
+    })();
+    </script>
+
+    <footer class="site-footer">
+      <div class="quote">"Güç, iradeye boyun eğer. Ama sadakat, ölümü bile yener."</div>
+      <div class="rights"><span class="big">7</span>© 7 Karanlık Evreni — Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

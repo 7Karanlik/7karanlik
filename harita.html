@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dünya Haritası · 7 Karanlık Evren Ansiklopedisi</title>
+<meta name="description" content="7 Karanlık evreninin krallıkları ve bilinen yerlerini gösteren harita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/style.css">
+<script src="data/data.js"></script>
+<script src="assets/common.js"></script>
+
+</head>
+<body>
+<div class="scrim"></div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/img/logo.png" alt="7 Karanlık Logosu">
+        <span class="tagline">Evren Ansiklopedisi</span>
+      </a>
+    </div>
+    <nav class="nav-main">
+<a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg><span>Ana Sayfa</span></a>
+<a href="harita.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><span>Dünya Haritası</span></a>
+<a href="irklar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><span>Irklar</span></a>
+<a href="karakterler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="8" r="3.2"/><path d="M2.8 19c.6-3.4 3.2-5.4 6.2-5.4s5.6 2 6.2 5.4"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 13.4c2.4.2 4.4 2 4.9 4.9"/></svg><span>Karakterler</span></a>
+<a href="evren.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>Evren</span></a>
+<a href="kronoloji.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><span>Kronoloji</span></a>
+<a href="silahlar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.5 3.5 20.5 9.5 11.5 18.5 7 20l1.5-4.5 6-6z"/><path d="M17.5 6.5l2 2"/><path d="M4 20l4.5-4.5"/></svg><span>Silahlar</span></a>
+<a href="galeri.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="13" height="13" rx="1"/><circle cx="7" cy="7" r="1.3"/><path d="M3 13l3.5-3.5L10 13l3-3 3 3"/><path d="M8 21h13V8"/></svg><span>Galeri</span></a>
+<a href="haberler.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="1.4"/><path d="M7 8.5h4M7 12h10M7 15.5h10"/></svg><span>Haberler</span></a>
+<a href="test-irk.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.4.9c0 1.9-2.6 2.1-2.6 3.8"/><circle cx="12" cy="17" r=".6" fill="currentColor" stroke="none"/></svg><span>Test: Hangi Irksın</span></a>
+    </nav>
+    <div class="sidebar-foot">
+      "Karanlık, sadece ışığı yutmaz.<br>Gerçeği de gizler."
+    </div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-toggle" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
+        <input type="text" placeholder="Karakter, ırk veya yer ara..." data-global-search>
+      </div>
+      <nav class="topnav">
+<a href="index.html">Ana Sayfa</a>
+<a href="harita.html" class="active">Dünya Haritası</a>
+<a href="irklar.html">Irklar</a>
+<a href="karakterler.html">Karakterler</a>
+<a href="evren.html">Evren</a>
+<a href="kronoloji.html">Kronoloji</a>
+<a href="silahlar.html">Silahlar</a>
+<a href="galeri.html">Galeri</a>
+<a href="haberler.html">Haberler</a>
+<a href="test-irk.html">Test: Hangi Irksın</a>
+        <a href="irklar.html" class="cta">Ansiklopedi</a>
+      </nav>
+    </header>
+
+    <section class="hero" style="padding:60px 48px;">
+      <div class="hero-inner" style="max-width:760px;">
+        <span class="eyebrow">Ansiklopedi · Coğrafya</span>
+        <h1 style="font-size:clamp(38px,5vw,58px);">Dünya Haritası</h1>
+        <p class="hero-lore">Yedi kadim krallığın toprakları, Kara Orman'ın gölgesinden Volvor Dağları'nın doruklarına uzanır. Aşağıdaki harita, bilinen dünyanın kabataslak bir tasvirini sunar — bölgeler ve yerler hâlâ kayıt altına alınıyor.</p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="map-frame">
+        <svg viewBox="0 0 1000 620" class="world-map" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="mapGlow" cx="50%" cy="40%" r="70%">
+              <stop offset="0%" stop-color="#2a2117"/>
+              <stop offset="100%" stop-color="#100d09"/>
+            </radialGradient>
+          </defs>
+          <rect x="0" y="0" width="1000" height="620" fill="url(#mapGlow)"/>
+          <g opacity="0.18" stroke="#c6a15b" stroke-width="1">
+            <path d="M0 60 H1000 M0 160 H1000 M0 260 H1000 M0 360 H1000 M0 460 H1000 M0 560 H1000"/>
+            <path d="M60 0 V620 M180 0 V620 M300 0 V620 M420 0 V620 M540 0 V620 M660 0 V620 M780 0 V620 M900 0 V620"/>
+          </g>
+
+          <!-- Regions (stylised) -->
+          <path d="M120 160 Q220 90 340 140 Q380 210 320 280 Q220 320 140 260 Q90 210 120 160Z" fill="#1c3a63" opacity="0.35" stroke="#5c7fb0" stroke-width="1.5"/>
+          <path d="M360 120 Q470 80 560 130 Q590 190 540 240 Q450 270 380 220 Q340 170 360 120Z" fill="#7a1f1f" opacity="0.35" stroke="#c25a5a" stroke-width="1.5"/>
+          <path d="M600 100 Q710 70 800 120 Q830 180 780 230 Q690 260 620 210 Q580 160 600 100Z" fill="#c9a227" opacity="0.30" stroke="#e8cf8a" stroke-width="1.5"/>
+          <path d="M140 320 Q250 290 340 340 Q370 410 300 460 Q210 490 140 440 Q100 380 140 320Z" fill="#1e3a5f" opacity="0.35" stroke="#6a93c4" stroke-width="1.5"/>
+          <path d="M380 340 Q490 300 580 350 Q610 420 540 470 Q450 500 390 440 Q350 390 380 340Z" fill="#141414" opacity="0.55" stroke="#7a1f1f" stroke-width="1.5"/>
+          <path d="M620 330 Q730 300 820 350 Q850 420 780 470 Q690 500 630 440 Q590 390 620 330Z" fill="#3a0f0f" opacity="0.4" stroke="#8f8a76" stroke-width="1.5"/>
+          <path d="M300 470 Q410 450 500 490 Q530 550 460 590 Q380 610 310 570 Q270 520 300 470Z" fill="#141414" opacity="0.4" stroke="#c9a227" stroke-width="1.5"/>
+
+          <!-- Kara Orman (central dark heart) -->
+          <ellipse cx="500" cy="300" rx="46" ry="34" fill="#0b0d08" stroke="#c6a15b" stroke-width="1.4"/>
+          <text x="500" y="304" text-anchor="middle" class="map-label map-label-strong">Kara Orman</text>
+
+          <!-- Markers -->
+          <g class="map-pin" data-name="Volvor Dağları"><circle cx="330" cy="230" r="5"/><text x="330" y="216" text-anchor="middle" class="map-label">Volvor Dağları</text></g>
+          <g class="map-pin" data-name="Moya Şehri"><circle cx="220" cy="190" r="5"/><text x="220" y="176" text-anchor="middle" class="map-label">Moya Şehri</text></g>
+          <g class="map-pin" data-name="Irona Şehri"><circle cx="470" cy="160" r="5"/><text x="470" y="146" text-anchor="middle" class="map-label">Irona Şehri</text></g>
+          <g class="map-pin" data-name="Tagra Şehri"><circle cx="700" cy="160" r="5"/><text x="700" y="146" text-anchor="middle" class="map-label">Tagra Şehri</text></g>
+          <g class="map-pin" data-name="Angoj Köyü"><circle cx="220" cy="380" r="5"/><text x="220" y="366" text-anchor="middle" class="map-label">Angoj Köyü</text></g>
+          <g class="map-pin" data-name="Minata Köyü"><circle cx="720" cy="390" r="5"/><text x="720" y="376" text-anchor="middle" class="map-label">Minata Köyü</text></g>
+          <g class="map-pin" data-name="Deril Denizi"><circle cx="400" cy="540" r="5"/><text x="400" y="526" text-anchor="middle" class="map-label">Deril Denizi</text></g>
+          <g class="map-pin" data-name="Kuzey Dağları"><circle cx="640" cy="140" r="5"/><text x="640" y="126" text-anchor="middle" class="map-label">Kuzey Dağları</text></g>
+          <g class="map-pin" data-name="Vakua Tepesi"><circle cx="180" cy="290" r="5"/><text x="180" y="276" text-anchor="middle" class="map-label">Vakua Tepesi</text></g>
+          <g class="map-pin" data-name="Hifler Adası"><circle cx="850" cy="300" r="5"/><text x="850" y="286" text-anchor="middle" class="map-label">Hifler Adası</text></g>
+        </svg>
+      </div>
+      <p class="map-note">Harita illüstratiftir ve krallıkların yaklaşık konumlarını sembolize eder. Yerlerin tam kayıtları için aşağıdaki listeye bakabilir veya <a href="evren.html">Evren</a> sayfasındaki "Mekanlar" sekmesini inceleyebilirsiniz.</p>
+    </section>
+
+    <section class="section tight">
+      <div class="section-head">
+        <div><span class="eyebrow">Kayıtlı Yerler</span><h2>Bilinen Topraklar</h2></div>
+        <div class="desc">Yedi krallığın sınırları içinde ve dışında kalan, ansiklopediye kaydedilmiş yerler.</div>
+      </div>
+      <div class="data-grid" id="mekan-grid"></div>
+    </section>
+
+    <script>
+    (function(){
+      var grid = document.getElementById('mekan-grid');
+      if (!grid || typeof SITE_DATA === 'undefined') return;
+      grid.innerHTML = SITE_DATA.mekanlar.map(function(m){
+        return '<div class="data-item"><div class="n">' + m.ad + '</div>' +
+          (m.nerede ? '<div class="d">' + m.nerede + '</div>' : '<div class="d">Konumu kayıtlarda belirtilmemiş.</div>') +
+          '</div>';
+      }).join('');
+    })();
+    </script>
+
+    <footer class="site-footer">
+      <div class="quote">"Güç, iradeye boyun eğer. Ama sadakat, ölümü bile yener."</div>
+      <div class="rights"><span class="big">7</span>© 7 Karanlık Evreni — Tüm hakları saklıdır.</div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
